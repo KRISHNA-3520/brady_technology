@@ -1,4 +1,5 @@
 import { createObjectCsvWriter } from 'csv-writer';
+import fs from 'fs';
 
 export const writeToCSV = async (data: any[]) => {
   const csvWriter = createObjectCsvWriter({
@@ -13,3 +14,8 @@ export const writeToCSV = async (data: any[]) => {
 
   await csvWriter.writeRecords(data);
 };
+
+// Ensure reports folder exists
+if (!fs.existsSync('reports')) {
+  fs.mkdirSync('reports');
+}
