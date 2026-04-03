@@ -69,8 +69,14 @@ This project automates the following workflow:
 
 	git clone https://github.com/KRISHNA-3520/brady_technology.git
 	cd brady_technology
-	npm install
+	npm init -y
 	npx playwright install
+	npm install -D @playwright/test
+	npm install -D @cucumber/cucumber ts-node typescript
+	npm install csv-writer
+	npm install dayjs
+	npm install -D cucumber-html-reporter
+	npm install -D @types/node
 
 🔐 Environment Configuration
 
